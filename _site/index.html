@@ -22,6 +22,47 @@
 .color-gray {
     color: #999 !important;
 }
+.btn-big-red {
+  background-color: #C63702;
+  background-image: linear-gradient(167deg, rgba(255, 255, 255, 0.1) 50%, rgba(0, 0, 0, 0) 55%), linear-gradient(to bottom, rgba(255, 255, 255, 0.15), rgba(0, 0, 0, 0));
+  border-radius: 6px;
+  box-shadow: 0 0 0 1px #C63702 inset, 0 0 0 2px rgba(255, 255, 255, 0.15) inset, 0 8px 0 0 #AD3002, 0 8px 0 1px rgba(0, 0, 0, 0.4), 0 8px 8px 1px rgba(0, 0, 0, 0.5);
+  color: #FFF;
+  display: inline-block;
+  font-family: "Lucida Grande", Arial, sans-serif;
+  font-size: 22px;
+  font-weight: bold;
+  height: 61px;
+  letter-spacing: -1px;
+  line-height: 61px;
+  margin: 30px 0 10px;
+  position: relative;
+  text-align: center;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+  text-decoration: none !important;
+  top: 0;
+  width: 186px;
+  -moz-transition: 0.15s;
+  -o-transition: 0.15s;
+  -webkit-transition: 0.15s;
+  transition: 0.15s;
+}
+.btn-big-red:hover, .btn-big-red:focus {
+  background-color: #D13902;
+  box-shadow: 0 0 0 1px #C63702 inset, 0 0 0 2px rgba(255, 255, 255, 0.15) inset, 0 10px 0 0 #AD3002, 0 10px 0 1px rgba(0, 0, 0, 0.4), 0 10px 8px 1px rgba(0, 0, 0, 0.6);
+  top: -2px;
+}
+.btn-big-red:active {
+  box-shadow: 0 0 0 1px #AD3002 inset, 0 0 0 2px rgba(255, 255, 255, 0.15) inset, 0 0 0 1px rgba(0, 0, 0, 0.4);
+  -moz-transform: translateY(10px);
+  -ms-transform: translateY(10px);
+  -webkit-transform: translateY(10px);
+  transform: translateY(10px);
+}
+.spacer{
+    display: block;
+    height: 50px;
+}
 </style>
 </head>
 <body>
@@ -47,7 +88,7 @@
 <p class="mdQrTxt02">開啟LINE應用程式，接著至「其他」標籤 <br>中的「加入好友」選單掃描行動條碼。 </p>
 <ul class="mdQrLink">
     <li class="color-gray"><a class="color-gray" onclick="click_download()" href>下載LINE </a></li>
-    <li><a onclick="click_line_bot()" href="#"> 手機直接按這裡進入！ </a></li>
+    <li><a onclick="click_line_bot()" href="#"> 手機直接按這裡進入 Line 頻道！ </a></li>
 </ul>
 <p class="mdQrTxt01 screenshot-frame">
     <img src="static/img/3.png" alt="">
@@ -56,7 +97,7 @@
 <p class="mdQrTxt01 screenshot-frame">
     <img src="static/img/4.png" alt="">
 </p>
-<a onclick="click_line_bot()" href="#"> 手機直接按這裡進入！ </a>
+<a onclick="click_line_bot()" href="#"> 手機直接按這裡進入 Line 頻道！ </a>
 <p class="mdQrTxt01 screenshot-frame">
     <img src="static/img/1.png" alt="">
 </p>
@@ -65,8 +106,9 @@
     <img src="static/img/2.png" alt="">
 </p>
 <ul class="mdQrLink">
-    <li> <a onclick="click_line_bot()" href="#"> 手機直接按這裡進入！ </a></li>
+    <li> <button class="btn-big-red" onclick="click_line_bot()"> 手機進入按這裡</button></li>
 </ul>
+<div class="spacer"></div>
 <!--MdQrSuccess--></div>
 <!--/LyContents--></div>
 <!--/CONTENTS-AREA-->
