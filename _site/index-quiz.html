@@ -46,20 +46,28 @@
 <p class="mdQrTxt01">或是直接加入LINE ID @uix9149y </p>
 <p class="mdQrTxt02">開啟LINE應用程式，接著至「其他」標籤 <br>中的「加入好友」選單掃描行動條碼。 </p>
 <ul class="mdQrLink">
-<li class="color-gray">沒有LINE？<a class="color-gray" onclick="click_download()" href>下載LINE </a></li>
+<ul class="mdQrLink">
+    <li class="color-gray"><a class="color-gray" onclick="click_download()" href>下載LINE </a></li>
+    <li><a onclick="click_line_bot()" href="#"> 手機直接按這裡進入！ </a></li>
 </ul>
 <p class="mdQrTxt01 screenshot-frame">
     <img src="static/img/1.png" alt="">
 </p>
+<a onclick="click_line_bot()" href="#"> 手機按這裡開始玩！ </a>
 <p class="mdQrTxt01 screenshot-frame">
     <img src="static/img/2.png" alt="">
 </p>
+<a onclick="click_line_bot()" href="#"> 手機直接按這裡進入！ </a>
 <p class="mdQrTxt01 screenshot-frame">
     <img src="static/img/3.png" alt="">
 </p>
+<a onclick="click_line_bot()" href="#"> 手機按這裡開始玩！ </a>
 <p class="mdQrTxt01 screenshot-frame">
     <img src="static/img/4.png" alt="">
 </p>
+<ul class="mdQrLink">
+    <li> <a onclick="click_line_bot()" href="#"> 手機直接按這裡進入！ </a></li>
+</ul>
 <!--MdQrSuccess--></div>
 <!--/LyContents--></div>
 <!--/CONTENTS-AREA-->
@@ -85,8 +93,13 @@ src="https://www.facebook.com/tr?id=216724785467879&ev=PageView&noscript=1"
 <script>
 fbq('trackCustom', 'CustomPageView');
 function click_download(){
-   fbq('trackCustom', 'ClickDownload');
-   window.open("https://line.me/download");
+    fbq('trackCustom', 'ClickDownload');
+    window.open("https://line.me/download");
+}
+function click_line_bot(){
+    fbq('trackCustom', 'ClickLineBot');
+    window.location.replace("https://line.me/R/ti/p/%40uix9149y");
+    return false;
 }
 </script>
 
